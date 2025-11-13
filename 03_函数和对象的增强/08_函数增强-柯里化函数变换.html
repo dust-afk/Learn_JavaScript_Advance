@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //普通函数
+    function foo(x, y, z) {
+      console.log(x + y + z)
+    }
+    // foo(10, 20, 30)
+
+    //因为foo不是一个科利华的函数,是一目前不能这样调用
+    //科利华函数
+    function foo(x) {
+      return function(y) {
+        return function(z) {
+          console.log(x + y + z)
+        }
+      }
+    }
+
+    foo(10)(20)(30)
+
+    //另外写法:箭头函数
+    // function foo3(x) {
+    //   return y => {
+    //     return z => {
+    //       console.log(x + y + z)
+    //     }
+    //   }
+    // }
+    var foo3 = x => y => z => {
+      console.log(x + y + z)
+    }
+        
+      
+    
+  </script>
+</body>
+</html>

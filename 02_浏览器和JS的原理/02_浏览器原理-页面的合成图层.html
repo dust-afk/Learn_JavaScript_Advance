@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .box, .container {
+    width: 200px;
+    height: 200px;
+    background-color: orange;
+  }
+
+  .container {
+    background-color: red;
+    /* 会生成新的图层 */
+    /* position: fixed; */
+    /* transform: translateZ(10px) */
+    transition:all 1s ease;
+    opacity: 0.9;
+  }
+  .container:hover {
+    /* transform: translateX(100px); */
+    opacity: 0.5;
+  }
+</style>
+<body>
+  <div class="box"></div>
+  
+  <div class="container">
+  </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //第一步:对数字*2
+    function double(num) {
+      return num *2
+    }
+
+    //第二步对数字**2
+
+    function pow(num) {
+      return num ** 2
+    }
+
+    //封装函数:传入多个函数,自动将多个函数组合在一起挨个调用
+    function composeFn(...fns) {
+
+      //1.边界判断(edge case)
+      var length = fns.length
+      if (length <= 0) return
+      for (var i = 0; i < length; i++) {
+        var fn = fns[i]
+        if (typeof fn !== "function") {
+          throw new Error(`index position ${i} must be function`)
+          
+        }
+      }
+      //2.返回的新函数
+      return function(...args) {
+        var result = fns[0].apply(this, args)
+        for (var i = 1; i < length; i++) {
+          var fn = fns[i]
+          result = fn.apply(this, [result])
+        }
+        return result
+      }
+    }
+    var newFn = composeFn(double, pow, console.log)
+    newFn(100)
+    newFn(200)
+  </script>
+</body>
+</html>

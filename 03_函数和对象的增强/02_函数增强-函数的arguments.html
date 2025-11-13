@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function foo(m, n) {
+      //arguments:类似数组对象
+    //   console.log(arguments)
+    //   //1.默认用法
+    //   //通过索引获取内容
+    //   console.log(arguments[0])
+    //   console.log(arguments[1])
+
+    //   for (var i = 0; i < arguments.length; i++) {
+    //     console.log(arguments[i])
+    //   }
+
+    //   for (var arg of arguments) {
+    //     console.log(arg)
+    //   }
+    //   //2.需求:获取所有参数中的偶数
+      
+    //   for (var arg of arguments) {
+    //     if (arg % 2 === 0) {
+    //     console.log(arg)
+    //     }
+    //   }
+
+    //2.1将arguments转化为数组方式一:
+    // var newArguments = []
+    // for (var arg of arguments) {
+    //   newArguments.push(arg)
+    // }
+    // console.log(newArguments)
+
+    //2.2.将arguments转化为数组方式三:ES6中的方式
+    var newArgs1 = Array.from(arguments)
+    console.log(newArgs1)
+    var newArgs2 = [...arguments]
+    console.log(newArgs2)
+
+    //2.3.将arguments转成数组方式二:调用slice方法(了解)
+      // var newArgs = [].slice.apply(arguments)
+      // var newArgs = Array.prototype.slice.apply(arguments)
+      // console.log(newArgs)
+    }
+
+
+    foo(10, 25, 32, 41)
+
+    //slice方法回顾: 了解细节
+    // var names = ["abc", "cba", "mba", "nba"]
+    // var newNames = names.slice(1,3)//this->names
+    // //slice方法->函数
+    // console.log(newNames)
+
+  </script>
+</body>
+</html>

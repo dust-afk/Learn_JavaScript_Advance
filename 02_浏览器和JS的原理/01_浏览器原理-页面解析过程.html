@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div class="box">box盒子</div>
+  <p>我是内容</p>
+  <script src=""></script>
+  <button>修改box</button>
+
+  <script>
+    var boxEl = document.querySelector(".box")
+    var btnEl = document.querySelector(".button")
+    btnEl.onclick = function() {
+      boxEl.style.height = "200px"
+    }
+  </script>
+</body>
+</html>

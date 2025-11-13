@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // "use strict"
+    //定义函数
+    //1.普通函数被独立调用
+    // function foo() {
+    //   console.log("foo:",this)
+    // }
+    // foo()
+
+    //2.函数定义在对象中,但是独立调用
+    var obj = {
+      name: "why",
+      bar: function() {
+        console.log("bar",this)
+      }
+    }
+    var baz = obj.bar
+    baz()
+
+    //3.高阶函数
+    function test(fn) {
+      fn()
+    }
+    test(obj.bar)
+    //3.严格模式下,独立函数调用中的this指向的是undefined
+  </script>
+</body>
+</html>

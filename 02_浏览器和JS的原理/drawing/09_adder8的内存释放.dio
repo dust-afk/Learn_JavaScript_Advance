@@ -1,0 +1,115 @@
+<mxfile host="65bd71144e">
+    <diagram name="第二次执行createAdder" id="evbATaX0q8KiMk7uLyHu">
+        <mxGraphModel dx="1160" dy="493" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1200" math="0" shadow="0">
+            <root>
+                <mxCell id="kkb-NHtKwFNi5lHrxfGB-0"/>
+                <mxCell id="kkb-NHtKwFNi5lHrxfGB-1" parent="kkb-NHtKwFNi5lHrxfGB-0"/>
+                <mxCell id="kkb-NHtKwFNi5lHrxfGB-2" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="kkb-NHtKwFNi5lHrxfGB-1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="140" y="20" as="targetPoint"/>
+                        <mxPoint x="115" y="30" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="kkb-NHtKwFNi5lHrxfGB-3" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="kkb-NHtKwFNi5lHrxfGB-1" vertex="1">
+                    <mxGeometry x="300" y="70" width="280" height="480" as="geometry"/>
+                </mxCell>
+                <mxCell id="kkb-NHtKwFNi5lHrxfGB-4" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="kkb-NHtKwFNi5lHrxfGB-1" vertex="1">
+                    <mxGeometry x="590" y="70" width="540" height="540" as="geometry"/>
+                </mxCell>
+                <mxCell id="kkb-NHtKwFNi5lHrxfGB-5" value="Global Object(window)" style="swimlane;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="kkb-NHtKwFNi5lHrxfGB-1" vertex="1">
+                    <mxGeometry x="600" y="80" width="150" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="kkb-NHtKwFNi5lHrxfGB-6" value="EC(golabl)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;" parent="kkb-NHtKwFNi5lHrxfGB-1" vertex="1">
+                    <mxGeometry x="310" y="340" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="kkb-NHtKwFNi5lHrxfGB-7" value="Math对象&lt;div&gt;Date&lt;/div&gt;&lt;div&gt;String&lt;/div&gt;&lt;div&gt;Number&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;createAdder:0xa00&lt;/div&gt;&lt;div&gt;adder5: 0xb00&lt;/div&gt;&lt;div&gt;adder8:0xc00&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="kkb-NHtKwFNi5lHrxfGB-1" vertex="1">
+                    <mxGeometry x="600" y="110" width="160" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="kkb-NHtKwFNi5lHrxfGB-8" value="Function Object(creatAdder 0xa00)" style="swimlane;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="kkb-NHtKwFNi5lHrxfGB-1" vertex="1">
+                    <mxGeometry x="780" y="80" width="150" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="kkb-NHtKwFNi5lHrxfGB-9" value="length:&lt;div&gt;name&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;[[scopes]]: 0xf00&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="kkb-NHtKwFNi5lHrxfGB-1" vertex="1">
+                    <mxGeometry x="780" y="120" width="100" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="kkb-NHtKwFNi5lHrxfGB-10" value="Activation Object(0x200)" style="swimlane;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="kkb-NHtKwFNi5lHrxfGB-1" vertex="1">
+                    <mxGeometry x="600" y="300" width="150" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="kkb-NHtKwFNi5lHrxfGB-11" value="arguments(值)&lt;div&gt;count:5&lt;/div&gt;&lt;div&gt;adder:0xb00&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="kkb-NHtKwFNi5lHrxfGB-1" vertex="1">
+                    <mxGeometry x="610" y="350" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="kkb-NHtKwFNi5lHrxfGB-12" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="kkb-NHtKwFNi5lHrxfGB-1" vertex="1">
+                    <mxGeometry x="300" y="370" width="240" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="kkb-NHtKwFNi5lHrxfGB-13" value="VO:GO&lt;div&gt;scope chain&lt;/div&gt;&lt;div&gt;this&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="kkb-NHtKwFNi5lHrxfGB-1" vertex="1">
+                    <mxGeometry x="320" y="380" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="kkb-NHtKwFNi5lHrxfGB-14" value="adder8 = null" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="kkb-NHtKwFNi5lHrxfGB-1" vertex="1">
+                    <mxGeometry x="320" y="440" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="kkb-NHtKwFNi5lHrxfGB-15" value="上下文执行栈(ESC)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="kkb-NHtKwFNi5lHrxfGB-1" vertex="1">
+                    <mxGeometry x="350" y="40" width="130" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="kkb-NHtKwFNi5lHrxfGB-16" value="scope chain(0xf00)" style="swimlane;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="kkb-NHtKwFNi5lHrxfGB-1" vertex="1">
+                    <mxGeometry x="960" y="80" width="160" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="kkb-NHtKwFNi5lHrxfGB-17" value="0:GO" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="kkb-NHtKwFNi5lHrxfGB-16" vertex="1">
+                    <mxGeometry x="10" y="30" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="kkb-NHtKwFNi5lHrxfGB-18" value="" style="endArrow=classic;html=1;" parent="kkb-NHtKwFNi5lHrxfGB-1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="730" y="230" as="sourcePoint"/>
+                        <mxPoint x="780" y="180" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="kkb-NHtKwFNi5lHrxfGB-19" value="" style="endArrow=classic;html=1;" parent="kkb-NHtKwFNi5lHrxfGB-1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="730" y="230" as="sourcePoint"/>
+                        <mxPoint x="780" y="180" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="kkb-NHtKwFNi5lHrxfGB-20" value="" style="endArrow=classic;html=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;exitX=0.98;exitY=0.833;exitDx=0;exitDy=0;exitPerimeter=0;" parent="kkb-NHtKwFNi5lHrxfGB-1" source="kkb-NHtKwFNi5lHrxfGB-9" target="kkb-NHtKwFNi5lHrxfGB-16" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="730" y="330" as="sourcePoint"/>
+                        <mxPoint x="780" y="280" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="kkb-NHtKwFNi5lHrxfGB-21" value="Function Object(adder 0xb00)" style="swimlane;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="kkb-NHtKwFNi5lHrxfGB-1" vertex="1">
+                    <mxGeometry x="780" y="300" width="160" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="kkb-NHtKwFNi5lHrxfGB-22" value="length:&lt;div&gt;name&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;[[scopes]]: 0xf00&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="kkb-NHtKwFNi5lHrxfGB-1" vertex="1">
+                    <mxGeometry x="780" y="340" width="100" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="kkb-NHtKwFNi5lHrxfGB-23" value="scope chain(0xf00)" style="swimlane;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="kkb-NHtKwFNi5lHrxfGB-1" vertex="1">
+                    <mxGeometry x="960" y="300" width="150" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="kkb-NHtKwFNi5lHrxfGB-24" value="0:AO 0x200&lt;div&gt;1:GO:0x100&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="kkb-NHtKwFNi5lHrxfGB-23" vertex="1">
+                    <mxGeometry x="10" y="30" width="90" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="kkb-NHtKwFNi5lHrxfGB-25" value="" style="endArrow=classic;html=1;exitX=0.571;exitY=0.667;exitDx=0;exitDy=0;exitPerimeter=0;" parent="kkb-NHtKwFNi5lHrxfGB-1" source="kkb-NHtKwFNi5lHrxfGB-11" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="730" y="400" as="sourcePoint"/>
+                        <mxPoint x="780" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="kkb-NHtKwFNi5lHrxfGB-26" value="" style="endArrow=classic;html=1;exitX=0.9;exitY=0.7;exitDx=0;exitDy=0;exitPerimeter=0;" parent="kkb-NHtKwFNi5lHrxfGB-1" source="kkb-NHtKwFNi5lHrxfGB-22" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="730" y="400" as="sourcePoint"/>
+                        <mxPoint x="960" y="340" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="kkb-NHtKwFNi5lHrxfGB-27" value="" style="endArrow=classic;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=0.976;entryY=0.103;entryDx=0;entryDy=0;entryPerimeter=0;" parent="kkb-NHtKwFNi5lHrxfGB-1" source="kkb-NHtKwFNi5lHrxfGB-24" target="kkb-NHtKwFNi5lHrxfGB-10" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="730" y="400" as="sourcePoint"/>
+                        <mxPoint x="780" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="kkb-NHtKwFNi5lHrxfGB-28" value="" style="endArrow=classic;html=1;exitX=0.438;exitY=0.722;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.208;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="kkb-NHtKwFNi5lHrxfGB-1" source="kkb-NHtKwFNi5lHrxfGB-7" target="kkb-NHtKwFNi5lHrxfGB-21" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="730" y="390" as="sourcePoint"/>
+                        <mxPoint x="780" y="340" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
