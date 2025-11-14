@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+    1.p1是person的实例对象
+    2.obj是Object的实例对象
+    3.Function/Object/Foo都是Function的实例对象
+    4.原型对象默认创建时,隐式原型都是指向Object的显式原型的(Object指向null)
+      *推导结论:Object是Person/Function的父类
+    */
+    var obj = {} //new Object()
+    obj.__proto__ //Object.prototype
+
+    function foo() {} //new Function()
+    console.log(foo.__proto__)//Function.prototype
+    function Person() {
+
+    } //Person.__proto__ === Function.prototype
+
+    console.log(foo.__proto__ === Function.prototype)
+    console.log(Person.__proto__ === Function.prototype)
+    console.log(Person.__proto__ === foo.__proto__)
+    console.log(Object.__proto__ === Function.prototype)
+    console.log(Function.__proto__ === Function.prototype)
+    var p1 = new Person()
+    var p2 = new Person()
+    console.log(Object.prototype)
+  </script>
+</body>
+</html>
