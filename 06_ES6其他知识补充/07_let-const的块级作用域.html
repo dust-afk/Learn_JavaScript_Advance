@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+      //1.在ES5以及之前,只有全局和函数会形成自己的作用域
+      //代码块
+      // function foo() {
+      //   console.log("hello world")
+      // }
+
+      // {
+      //   var message = "hello"
+      // }
+      // console.log(message)
+
+      //2.从ES6开始,使用let/const/function/class声明的变量有自己的作用域
+      // console.log(message)
+      // foo()
+      {
+        var message = "hello world"
+        let age = 18
+        const height = 1.88
+
+        class Person {}
+        function foo() {
+          console.log("foo function")
+        }
+      }
+      // console.log(age)
+      // console.log(height)
+      // const p = new Person()
+      foo()
+  </script>
+
+</body>
+</html>

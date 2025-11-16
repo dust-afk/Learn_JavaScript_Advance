@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //1.防止对象中也有一个自己的hasOwnProperty方法
+    // const obj = {
+    //   name: "why",
+    //   age: 18,
+    //   __proto__: {
+    //     address: "广州市"
+    //   }
+    // }
+    // console.log(obj.hasOwnProperty("name"))
+    // console.log(obj.hasOwnProperty("address"))
+
+    // console.log(Object.hasOwn(obj, "name"))
+    // console.log(Object.hasOwn(obj, "address"))
+
+    //2.和hasOwnProperty区别二
+    const info = Object.create(null)
+    info.name = "why"
+    // console.log(info.hasOwnProperty("name"))
+    console.log(Object.hasOwn(info, "name"))
+  </script>
+</body>
+</html>

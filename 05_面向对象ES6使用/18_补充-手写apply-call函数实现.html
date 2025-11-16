@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //new Function()
+    //foo.__proto__ === Function.prototype
+    function foo(name, age) {
+      console.log(this, name, age)
+    }
+
+    //foo函数可以通过apply/call
+    // foo.apply("aaa",["why",18])
+    // foo.call("bbb","kobe", 30)
+
+    //1.给函数对象添加方法
+    Function.prototype.hyapply = function(thisArg, otherArgs) {
+      //this ->调用函数对象
+      //thisArg -> 传入第一个参数,要绑定的this
+      // console.log(this)//指向当前调用函数对象
+      // this.apply(thisArg)
+      //1.获取thisArg,并且确保是一个对象类型
+      thisArg = (thisArg === null || thisArg === undefined)? window: Object(thisArg)
+
+      //thisArg.fn = this
+      Object.defineProperty(thisArg, "fn", {
+        configurable: true,
+        value: this
+      })
+      thisArg.fn = this
+      thisArg.fn(...otherArgs)
+      delete thisArg.fn
+    }
+    // foo.hyapply({name: "why"}, ["james", 25])
+    // foo.hyapply(123,["why", 18])
+    // foo.hyapply(null,["Kobe", 30])
+
+    //2.
+    Function.prototype.hycall = function(thisArg, ...otherArgs) {
+      //1.获取thisArg,并且确保是一个对象类型
+      thisArg = (thisArg === null || thisArg === undefined)? window: Object(thisArg)
+
+      //thisArg.fn = this
+      Object.defineProperty(thisArg, "fn", {
+        configurable: true,
+        value: this
+      })
+      thisArg.fn = this
+      thisArg.fn(...otherArgs)
+      delete thisArg.fn
+    }
+    foo.hycall({name: "why"}, "james", 25)
+    foo.hycall(123,"why", 18)
+    foo.hycall(null,"Kobe", 30)
+
+
+    
+  </script>
+</body>
+</html>

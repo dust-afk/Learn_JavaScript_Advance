@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const obj = {
+      name: "why",
+      age: 18,
+      height: 1.88,
+      friend: {
+        name: "curry"
+      }
+    }
+    //引用赋值
+    // const info1 = obj
+
+    //2.浅拷贝
+    // const info2 = {
+    //   ...obj
+    // }
+    // info2.name = "kobe"
+    // info2.friend.name = "james"
+    // // console.log(obj.name)
+    // // console.log(info2.name)
+    // console.log(ob.friend.name)
+
+    //深拷贝
+    //方式一:第三方库
+    // 方式二:自己实现
+    //方式三:利用现有JS机制,实现深拷贝JSON
+    const info3 = JSON.parse(JSON.stringify(obj))
+    info3.friend.name = "james"
+    console.log(info3.friend.name)
+    console.log(obj.friend.name)
+  </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let info = {name: "why", age: 18}
+    let obj = new WeakRef(info)
+    const finalRegistry = new FinalizationRegistry(() => {
+      console.log("对象被回收")
+    })
+    finalRegistry.register(info, "info")
+
+    setTimeout(() => {
+      info = null
+    }, 2000);
+
+    setTimeout(() => {      
+      console.log(obj.deref().name, obj.deref().age)
+    }, 8000);
+  
+
+  </script>
+</body>
+</html>

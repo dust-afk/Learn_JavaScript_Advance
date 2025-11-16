@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //new Function()
+    //foo.__proto__ === Function.prototype
+    function foo(name, age) {
+      console.log(this, name, age)
+    }
+
+    //1.对象中的某些属性和方法是来自Function.prototype
+    //test.__proto__ === Function.prototype
+    function test() {}
+    //foo当做一个对象,获取apply方法
+    foo.apply("abc",["why", 18])
+    console.log(Function.prototype.call)
+    console.log(Function.prototype.apply)
+    console.log(Function.prototype.apply === foo.apply)
+    
+    //2.在Function.prototype中添加的属性和方法可以被所有函数获取
+    Function.prototype.info = "hello"
+    console.log(test.info)
+    console.log(foo.info)
+    Function.prototype.bar = function() {
+      console.log("bar function execution")
+    }
+    test.bar()
+    foo.bar()
+    Function.prototype.bar()
+    
+
+  </script>
+</body>
+</html>

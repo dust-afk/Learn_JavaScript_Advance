@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //针对对象
+    //方式一:描述符(推荐)
+    // var obj = {
+
+    // }
+    // Object.defineProperty(obj, "name", {
+    //   configurable: true,
+    //   enumerable: true,
+    //   set: function() {
+
+    //   },
+    //   get: function() {
+
+    //   }
+
+    // })
+
+    //方式二:直接在对象中定义访问器
+    //监听_name什么时候访问,什么时候设置新的值
+    var obj = {
+      _name: "why",
+      //setter方法
+      set name(value) {
+
+      },
+      //getter方法
+      get name() {
+        return this._name
+      }
+    }
+  </script>
+</body>
+</html>

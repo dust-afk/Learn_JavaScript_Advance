@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //function定义类
+    function Person1(name, age) {
+      this.name = name
+      this.age = age
+    }
+    Person1.prototype.running = function() {}
+    Person1.prototype.eating = function() {}
+
+    var p1 = new Person1("why", 18)
+    console.log(p1.__proto__ === Person1.prototype)
+    console.log(Person1.prototype.constructor)
+
+    //不同点:作为普通函数调用
+    Person1("abc", 100)
+
+    //class定义类
+    class Person2 {
+      constructor(name, age) {
+        this.name = name
+        this.age = age
+      }
+      running() {
+        console.log(this.name + "running")
+      }
+      eating() {
+        console.log(this.name + "eating")
+      }        
+    }
+    var p2 = new Person2("kobe", 30)
+    console.log(p2.__proto__ === Person2.prototype)
+
+    //不同点:class定义的类,不能作为一个普通函数进行调用
+    // Person2("cba", 20)
+  </script>
+</body>
+</html>

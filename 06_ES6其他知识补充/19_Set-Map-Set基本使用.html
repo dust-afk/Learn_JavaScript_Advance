@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //创建set
+    const set = new Set()
+
+    //添加元素
+    set.add(10)
+    set.add(7)
+    set.add(24)
+    console.log(set)
+
+    const info = {}
+    const obj = {}
+    set.add(info)
+    set.add(obj)
+    console.log(set)
+
+    //3.应用场景:数组去重
+    const names = ["abc", "cba", "nba", "abc", "nba"]
+    // const newNames = []
+    // for (const item of names) {
+    //   if (!newNames.includes(item)) {
+    //     newNames.push(item)
+    //   }
+    // }
+
+    const newNamesSet = new Set(names)
+    const newNames = Array.from(newNamesSet)
+    console.log(newNames)
+
+    //4.Set的其他属性和方法
+    //属性
+    console.log(set.size)
+    //方法
+    //4.1 add方法
+    set.add(100)
+    console.log(set)
+    //4.2delete
+    set.delete(obj)
+    console.log(set)
+    //4.3.has
+    console.log(set.has(info))
+    //4.4.clear
+    // set.clear()
+    // console.log(set)
+    //4.5 forEach
+    set.forEach(item => console.log(item))
+
+    //5.set支持for ... of
+    for (const item of set) {
+      console.log(item)
+    }
+  </script>
+</body>
+</html>
