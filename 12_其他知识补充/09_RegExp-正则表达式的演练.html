@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //创建正则
+
+    const re2 = /aaa/ig
+    const message = "123ffABC shdfj234 sd33abc A11BC"
+    //1.使用正则对象上的实例方法
+
+    //2.使用字符串的方法,传入一个正则表达式
+    //需求: 将所有abc(忽略大小写)换成bca
+    const newMessage = message.replaceAll(/abc/ig, "cba")
+    console.log(newMessage)
+
+    //需求: 将字符串数字全部删除
+    const newMessage2 = message.replaceAll(/\d+/ig,"")
+    console.log(newMessage2)
+    
+  </script>
+</body>
+</html>

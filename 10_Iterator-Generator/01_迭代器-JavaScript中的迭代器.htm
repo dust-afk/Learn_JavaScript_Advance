@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const names = ["abc", "cba", "nba"]
+    //给数组names创建一个迭代器(迭代器:names的迭代器)
+    let index = 0
+    const namesIterator = {
+      next: function() {
+        //done:Boolean
+        //value:具体的值/undefined
+        if (index < names.length) {
+          return {done: false, value: names[index++]}
+        } else {
+          return {done: true}
+        }
+      }
+    }
+    console.log(namesIterator.next())
+    console.log(namesIterator.next())
+    console.log(namesIterator.next())
+    console.log(namesIterator.next())
+
+    //数组nums
+    const nums = [100, 24, 98, 32]
+  </script>
+</body>
+</html>

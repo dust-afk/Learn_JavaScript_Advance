@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button>按钮</button>
+  <script>
+    //1.遇到一个错误,造成后续代码全都不能执行
+    // function foo() {
+    //   "abc".filter() 
+    //   console.log("++++")
+    // }
+    // foo()
+    // console.log("---")
+    // const btn = document.querySelector("button")
+    // btn.onclick = function() {
+    //   console.log("监听btn点击")
+    // }
+
+    //2.自己封装一些工具
+    function sum(num1, num2) {
+      if (typeof num1 !== "number") {
+        throw "num1 传入类型有问题"
+      }
+
+      if (typeof num2 !== "number") {
+        throw "num2传入类型有问题"
+      }
+      return num1 + num2
+    }
+
+    const result = sum(123, 321)
+    
+  </script>
+</body>
+</html>

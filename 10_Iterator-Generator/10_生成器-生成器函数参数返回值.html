@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const names = ["abc", "cba", "nba"]
+    
+    /*
+    生成器函数:
+    1.function后面会跟上符号*
+    2.代码的执行可以被yield控制
+    3.生成器函数默认执行时,返回一个生成器对象
+      *要想执行函数内部的代码,需要生成器对象,调用它的next操作
+      *当遇到yield,会中断执行
+    */
+   //1.定义了一个生成器函数
+   function* foo(name1) {
+    console.log("111", name1)
+    console.log("222", name1)
+    const name2 = yield "aaa"
+    console.log("333", name2)
+    console.log("444", name2)
+    const name3 = yield "bbb"
+    // return "bbb"
+    console.log("555", name3)
+    console.log("666", name3)
+    yield "ccc"
+    return undefined
+   }
+   //2.调用生成器函数, 返回一个生成器对象
+   //2.调用生成器函数, 返回一个生成器对象
+   const generator = foo()
+   //调用next方法
+   console.log(generator.next("第一次调用next"))
+   console.log(generator.next("第二次调用next"))
+   console.log(generator.next("第三次调用next"))
+   console.log(generator.next())
+
+   //3.在中间位置直接return
+
+  </script>
+</body>
+</html>

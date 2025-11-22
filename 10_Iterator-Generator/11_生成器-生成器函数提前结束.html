@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function* foo(name1) {
+      console.log("111", name1)
+      console.log("222", name1)
+      const name2 = yield "aaa"
+      console.log("333", name2)
+      console.log("444", name2)
+      const name3 = yield "bbb"
+      // return "bbb"
+      console.log("555", name3)
+      console.log("666", name3)
+      yield "ccc"
+
+      console.log("最后一次执行")
+      return undefined
+    }
+
+    // const generator = foo("next1")
+    // console.log(generator.next())
+    // console.log(generator.return("next2"))
+    // console.log(generator.next("next3"))
+    // console.log(generator.next("next4"))
+
+    const generator = foo("next1")
+    console.log(generator.next())
+    console.log(generator.throw(new Error("next2 throw erro")))
+    console.log(generator.next("next3"))
+    console.log(generator.next("next4"))
+  </script>
+</body>
+</html>

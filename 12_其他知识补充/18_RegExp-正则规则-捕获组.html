@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //1.捕获组
+    const message = "我最喜欢的两本书:《黄金时代》和《沉默的大多数》,《一只特立独行的猪》"
+    //默认.+采用贪婪模式
+    // const nameRe = /《.+》/ig
+    // const result1 = message.match(nameRe)
+    // console.log(result1)
+
+    const nameRe = /(?:《)(?<why>.+?)(?:》)/ig
+    const iterator = message.matchAll(nameRe)
+    for (const item of iterator) {
+      console.log(item)
+    }
+
+    //2.将捕获组作为整体
+    const info = "ddabcabcjjjjkabc;j;labcabc"
+    const abcRe = /(abc){2,}/ig
+    console.log(info.match(abcRe))
+
+
+  </script>
+</body>
+</html>

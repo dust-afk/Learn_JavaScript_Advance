@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // console.log("script start")
+    // function bar() {
+    //   console.log("bar function")
+    // }
+    // function foo() {
+    //   console.log("foo function")
+    //   bar()
+    // }
+    // foo()
+    // //定时器
+    // setTimeout(() => {
+    //   console.log("setTimeout0")
+    // }, 0);
+    // setTimeout(() => {
+    //   console.log("setTimeout1")
+    // }, 1);
+
+    //Promise中的then回调也会被加入队列中
+    console.log("111")
+    new Promise((resolve, reject) => {
+      console.log("222")
+      console.log("---1")
+      console.log("---2")
+      resolve()
+      console.log("---3")
+    }).then(res => {
+      console.log("then传入的回调:res",res)
+    })
+    console.log("333")
+    console.log("script end")
+  </script>
+</body>
+</html>

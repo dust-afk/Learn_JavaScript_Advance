@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button>按钮</button>
+  <input type="text">
+  <button class="cancel">取消</button>
+  <!-- CDN引入,网络的js文件 -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/underscore@1.13.7/underscore-umd-min.js -->
+<!-- "></script> -->
+ <!-- 本地引入:下载js文件,并且本地引入 -->
+ <!-- <script src="./js/underscore.js"></script> -->
+  <script>
+    function hydebounce(fn, delay, immediate = false) {
+      //1.用于记录上一次事件触发的timer
+      let timer = null
+      let isInvoke = false
+      //2.触发事件时执行函数
+      const _debounce = function(...args) {
+        // console.log(this)
+        //2.1如果有再次触发(更多触发事件), 那么取消上一次事件
+        if (timer) clearTimeout(timer)
+
+      }
+        //2.2.延迟去执行对应fn函数(传入的回调函数)
+        timer = setTimeout(() => {
+          fn.apply(this, args)
+          timer = null//执行过函数之后,将timer重新设置为null
+        }, delay);
+      }
+      //3.给_debounce绑定一个取消函数
+      _debounce.cancel = function() {
+        if (timer) clearTimeout(timer)
+      }
+      //返回一个新的函数
+      return _debounce
+  
+  </script>
+  <script>
+    //1.获取input元素
+    const inputEl = document.querySelector("input")
+    const cancelBtn = document.querySelector(".cancel")
+    //未进行防抖处理代码
+    // let counter = 1
+    // inputEl.oninput = (function() {
+    //   console.log(`发送网络请求${counter++}`, this.value)
+    // })
+
+    //2.underscore防抖处理代码
+    // let counter = 1
+    // inputEl.oninput = _.debounce(function() {
+    //   console.log(`发送网络请求${counter++}`, this.value)
+    // }, 1000)
+
+    //3.自己实现防抖
+    let counter = 1
+    const debounceFn = hydebounce(function(event) {
+      console.log(`发送网络请求${counter++}`, this, event)
+    }, 5000)
+    inputEl.oninput = debounceFn
+    //实现取消功能
+    cancelBtn.onclick = function() {
+      debounceFn.cancel()
+    }
+  </script>
+</body>
+</html>
